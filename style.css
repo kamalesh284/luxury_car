@@ -148,41 +148,87 @@
 }
 
 @media screen and (max-width: 780px) {
+
     .nav-container {
         height: 50px;
         padding: 5px 10px;
 
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 8px;
+        overflow: hidden;
+    }
+
+    .logo {
+        flex: 0 0 auto;
     }
 
     .logo img {
-        width: 45px;
-        height: 45px;
+        width: 42px;
+        height: 42px;
+        display: block;
+    }
+
+    .nav-items {
+        flex: 1 1 auto;
+        min-width: 0;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .nav-items::-webkit-scrollbar {
+        display: none;
     }
 
     .nav-items ul {
-        gap: 10px;
-        margin-right: 2px;
+        width: max-content;
+        min-width: max-content;
+
+        display: flex;
+        align-items: center;
+
+        gap: 12px;
+        margin: 0;
+        padding: 0;
+
+        white-space: nowrap;
+    }
+
+    .nav-items ul li {
+        flex: 0 0 auto;
     }
 
     .nav-items ul li a {
-        font-size: 15px;
-        padding: 3px;
+        display: block;
+
+        padding: 5px 2px;
         margin: 0;
+
+        font-size: 13px;
+        line-height: 1;
+        white-space: nowrap;
     }
 
     .nav-items ul li img {
-        width: 18px;
-        height: 18px;
-        display: block;
+        width: 20px;
+        height: 20px;
 
+        display: block;
+        flex: 0 0 auto;
     }
 
     .nav-items ul li a::after {
-        bottom: 2px;
+        bottom: 0;
     }
 
     .logo img:hover {
-        transform:scale(1.05);
+        transform: scale(1.05);
     }
 }
 
